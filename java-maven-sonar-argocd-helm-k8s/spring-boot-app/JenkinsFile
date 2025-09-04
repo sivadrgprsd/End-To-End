@@ -1,11 +1,6 @@
 pipeline {
   agent any
 
-  tools {
-    maven 'Maven'   // Make sure this is configured in Jenkins Global Tool Config
-    jdk 'Java17'         // Same here
-  }
-
   environment {
     DOCKER_IMAGE = "sivadrgprsd/ultimate-cicd:${BUILD_NUMBER}"
     REGISTRY_CREDENTIALS = credentials('docker-cred') // DockerHub credentials

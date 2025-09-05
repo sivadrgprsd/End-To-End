@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "sivadrgprsd/ultimate-cicd:${BUILD_NUMBER}"
-    REGISTRY_CREDENTIALS = credentials('docker-cred') // DockerHub credentials
+    REGISTRY_CREDENTIALS = credentials('docker_cred') // DockerHub credentials
     GIT_REPO_NAME = "End-To-End"
     GIT_USER_NAME = "sivadrgprsd"
     GITHUB_TOKEN = credentials('github') // GitHub PAT stored in Jenkins

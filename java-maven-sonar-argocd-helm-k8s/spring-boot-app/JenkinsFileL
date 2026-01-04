@@ -7,11 +7,11 @@ pipeline {
     }
   }
   stages {
-    stage('Checkout') {
-      steps {
-        sh 'echo passed'
+    //stage('Checkout') {
+      //steps {
+        //sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/sivadrgprsd/End-To-End.git'
-      }
+      //}
     }
     stage('Build and Test') {
       steps {

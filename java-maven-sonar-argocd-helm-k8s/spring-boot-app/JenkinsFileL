@@ -5,15 +5,12 @@ pipeline {
       //args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
       reuseNode true
     }
-options {
-    skipDefaultCheckout(true)
-  }
   }
   stages {
     stage('Checkout') {
       steps {
-        //sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/sivadrgprsd/End-To-End.git'
+        sh 'echo passed'
+        //git branch: 'main', url: 'https://github.com/sivadrgprsd/End-To-End.git'
       }
     }
     stage('Build and Test') {

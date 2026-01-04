@@ -13,8 +13,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        //sh 'echo passed'
-        checkout scm
+        sh 'echo passed'
+        //checkout scm
         //git branch: 'main', url: 'https://github.com/sivadrgprsd/End-To-End.git'
       }
     }

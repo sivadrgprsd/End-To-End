@@ -7,10 +7,14 @@ pipeline {
       args '--add host=host.docker.internal:host-gateway'
     }
   }
+  options {
+    skipDefaultCheckout(false) // or true if you want to handle checkout manually
+  }
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
+        //sh 'echo passed'
+        checkout scm
         //git branch: 'main', url: 'https://github.com/sivadrgprsd/End-To-End.git'
       }
     }
